@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 150 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 12%;
+
+    --primary: 145 45% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 38 55% 90%;
+    --secondary-foreground: 150 30% 12%;
+
+    --muted: 40 20% 93%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 38 70% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 145 45% 32%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 145 30% 96%;
+    --sidebar-foreground: 150 30% 12%;
+    --sidebar-primary: 145 45% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 38 55% 90%;
+    --sidebar-accent-foreground: 150 30% 12%;
+    --sidebar-border: 40 15% 85%;
+    --sidebar-ring: 145 45% 32%;
+
+    --wireframe: 220 10% 70%;
+    --wireframe-light: 220 10% 92%;
+    --wireframe-dark: 220 10% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .wireframe-box {
+    @apply border-2 border-dashed rounded-lg;
+    border-color: hsl(var(--wireframe));
+  }
+  .wireframe-annotation {
+    color: hsl(var(--wireframe-dark));
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+}
